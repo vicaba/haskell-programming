@@ -38,4 +38,61 @@ Beta Reduce
 	= [v := z]
 	= z
 	
+2.
+(λx.λy.xyy)(λa.a)b
+	= [x := (λa.a)]
+	= (λy.(λa.a)yy)b
+	= [y := b]
+	= (λa.a)bb
+	
+3.
+(λy.y)(λx.xx)(λz.zq)
+	= [y := (λx.xx)]
+	= (λx.xx)(λz.zq)
+	= [x := (λz.zq)]
+	= (λz.zq)(λz.zq)
+	= [z := (λz.zq)]
+	= (λz.zq)q
+	= [z := q]
+	= qq
+	
+4.
+(λz.z)(λz.zz)(λz.zy)
+	= [z := (λz.zz)]
+	= (λz.zz)(λz.zy)
+	= [z := (λz.zy)]
+	= (λz.zy)(λz.zy)
+	= [z := (λz.zy)]
+	= (λz.zy)y
+	= [z := y]
+	= yy
+	
+5.
+(λx.λy.xyy)(λy.y)y
+	= [x := (λy.y)]
+	= (λy.(λy.y)yy)y
+	= [y := y]
+	= (λy.y)yy
+	= yy
+
+6.
+(λa.aa)(λb.ba)c
+	= [a := (λb.ba)]
+	= (λb.ba)(λb.ba)c
+	= (λb.ba)ac
+	= aac
+	
+7.
+(λxyz.xz(yz))(λx.z)(λx.a)
+	= (λxλyλz.xz(yz))(λx.z)(λx.a)
+	= [x := (λx.z)]
+	= (λyλz'.(λx.z)z'(yz'))(λx.a)
+	= [y := (λx.a)]
+	= (λz'.(λx.z)z'((λx.a)z'))
+	= [x := z']
+	= (λz'.z((λx.a)z'))
+	= [x := z']
+	= (λz'.z(a))
+	= λz'.za
+
 
