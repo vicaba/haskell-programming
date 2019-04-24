@@ -1,0 +1,22 @@
+3.7 Chapter Exercises
+Reading Syntax
+1.
+a) good
+b) wrong
+c) good
+d) wrong
+e) wrong
+f) good
+g) wrong
+h) good
+
+2.
+a) d
+b) c
+c) e
+d) a
+e) b
+
+ Building functions
+ 1.
+2.
