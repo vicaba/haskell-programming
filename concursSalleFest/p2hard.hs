@@ -20,16 +20,10 @@ sol t = solRec (MultiSet.fromList $ sort t) 0
 
 solRec :: MultiSet.MultiSet String -> Integer -> Integer
 solRec t acc = do
-    if MultiSet.size (mMembersSet `MultiSet.intersection` t) == 4 then
-        solRec (t `MultiSet.difference` (mMembersSet)) (acc + 1)
-    else
-        acc
-
-toInt :: String -> Integer
-toInt x = read x::Integer
-
-funZip :: [a -> b] -> [a] -> [b]
-funZip = zipWith (\f x -> f x)
+ if MultiSet.size (mMembersSet `MultiSet.intersection` t) == 4 then
+  solRec (t `MultiSet.difference` (mMembersSet)) (acc + 1)
+ else
+  acc   
 
 main = do
  withFile "/home/fitxer_entrada_2d.txt" ReadMode (\handle -> do
